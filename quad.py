@@ -23,6 +23,7 @@ def quadratic_function(a,b,c):
     x1 = (-b-sqrtd)/(2*a)
     global x2
     x2 = (-b+sqrtd)/(2*a)
+    return x1, x2
 def imaginary(a,b,c):
     f = e - q
     sqrtd = math.sqrt(int(f))
@@ -30,4 +31,5 @@ def imaginary(a,b,c):
     x1 = (-b-sqrtd)/(2*a)
     global x2
     x2 = (-b+sqrtd)/(2*a)
+    return x1, x2
 

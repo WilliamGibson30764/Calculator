@@ -1,8 +1,3 @@
-import pygame
-import random
-import time
-from random import randint
-
 slope = int(input("What do you want the slope to be?\n"))
 a = 0
 b = 0

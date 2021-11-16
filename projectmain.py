@@ -33,6 +33,17 @@ while True:
         text = text + "8"
     if event == "9":
         text = text + "9"
+    if event == "+":
+        text = text+"+"
+    if event == "-":
+        text = text + "-"
+    if event == "/":
+        text = text + "/"
+    if event == "*":
+        text = text+"*"
+    if event == "=":
+        text = text + "="
+
         
     win['-text-'].update(text)
 win.close

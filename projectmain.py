@@ -1,9 +1,15 @@
 import PySimpleGUI as sg
+import math
+import quad 
+from quad import code
+from quad import quadratic_function
+from quad import imaginary
 sg.theme('DarkAmber')
 text = ""
 def cb(text):
     return sg.Button(text, size=(5,1))
 layout = [  [sg.Text(text, key='-text-')],
+            [cb('Quad'),cb('Linear'),cb('Expo')],
             [cb('1'),cb('2'), cb('3'), cb("+"), cb("/")],
             [cb('4'), cb('5'), cb('6'), cb("-"), cb("*")],
             [cb('7'), cb('8'), cb('9'), cb("Enter")]

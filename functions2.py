@@ -1,8 +1,3 @@
-import pygame
-import random
-import time
-from random import randint
-
 #Asking for values
 first = int(input("What is the first value?\n"))
 second = int(input("What is the second value?\n"))

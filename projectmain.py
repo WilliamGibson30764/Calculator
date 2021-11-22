@@ -4,6 +4,7 @@ import quad
 from quad import code
 from quad import quadratic_function
 from quad import imaginary
+from linear import linear
 
 sg.theme('DarkAmber')
 global ttext

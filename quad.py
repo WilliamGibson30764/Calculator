@@ -1,35 +1,33 @@
 import math
-def code():
+a = int(input("enter a:"))
+b = int(input('Enter b:'))
+c = int(input("enter c:"))
+def code(a,b,c):
+    a != 0
     q = (b*b)
     e = (4*a*c)
-    while True:
+
     if a == 0:
-        print("a cannot be 0")
+        return "a cannot be 0"
     elif q > e:
-        quadratic_function(a,b,c)
-        print(f'The x intercepts are {x1} and {x2}')
+        return quadratic_function(a,b,c,q,e)
+        #print(f'The x intercepts are {x1} and {x2}')
     elif e > q:
-        imaginary(a,b,c)
-        print(f'The x  are {x1}i and {x2}i')
+        return imaginary(a,b,c,e,q)
+        #print(f'The x  are {x1}i and {x2}i')
     elif q == e:
-        print(-b/2*a)
+        return -b/2*a
     else:
-        print("This quadratic equation cannot be done")
-    a = input()
-def quadratic_function(a,b,c):
+        return "This quadratic equation cannot be done"
+def quadratic_function(a,b,c,q,e):
     d = q - e
     sqrtd = math.sqrt(int(d))
-    global x1
     x1 = (-b-sqrtd)/(2*a)
-    global x2
     x2 = (-b+sqrtd)/(2*a)
-    return x1, x2
-def imaginary(a,b,c):
+    return f"{x1},{x2}"
+def imaginary(a,b,c,e,q):
     f = e - q
     sqrtd = math.sqrt(int(f))
-    global x1
     x1 = (-b-sqrtd)/(2*a)
-    global x2
     x2 = (-b+sqrtd)/(2*a)
-    return x1, x2
-
+    return f"{x1}i,{x2}i"

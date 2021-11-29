@@ -7,6 +7,11 @@ from quad import code
 from quad import quadratic_function
 from quad import imaginary
 
+import linear
+from linear import linear
+
+import bmath
+from bmath import math
 
 sg.theme('DarkAmber')
 global ttext
@@ -71,9 +76,6 @@ def gb(event):
         if event == "*":
             ttext = ttext+"*"
             re = 1
-        if event == "=":
-            ttext = ttext + "="
-            re = 1
         return text
 
 
@@ -98,7 +100,23 @@ while True:
             c = gb(event)
             ttext = code(a,b,c)
         if event == "=":
-            ttext 
+            ttext = math(ttext)
+        if event == "Linear":
+            win['-text-'].update("What is A?")
+            event, values = win.read()
+            a = gb(event)
+            win['-text-'].update("What is B?")
+            event, values = win.read()
+            b = gb(event)
+            win['-text-'].update("What is C?")
+            event, values = win.read()
+            c = gb(event)
+            win['-text-'].update("What is X?")
+            event, values = win.read()
+            x = gb(event)
+            ttext = code(a, b, c, x)
+        else:
+            gb(event)
 
         
 

@@ -22,7 +22,7 @@ layout = [  [sg.Text(ttext, key='-text-')],
             [cb('Quad'),cb('Linear'),cb('?')],
             [cb('1'),cb('2'), cb('3'), cb("+"), cb("/")],
             [cb('4'), cb('5'), cb('6'), cb("-"), cb("*")],
-            [cb('7'), cb('8'), cb('9'), cb("=")]
+            [cb('7'), cb('8'), cb('9'), cb("="), cb("Clear")]
 ]
 def gb(event):
     global ttext
@@ -65,7 +65,7 @@ def gb(event):
             text = 9
             re = 1
         if event == "+":
-            ttext = ttext+"+"
+            ttext = ttext+ "+"
             re = 1
         if event == "-":
             ttext = ttext + "-"
@@ -74,8 +74,10 @@ def gb(event):
             ttext = ttext + "/"
             re = 1
         if event == "*":
-            ttext = ttext+"*"
+            ttext = ttext + "*"
             re = 1
+        if event =="Clear":
+            ttext = ""
         return text
 
 

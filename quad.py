@@ -1,7 +1,4 @@
 import math
-a = int(input("enter a:"))
-b = int(input('Enter b:'))
-c = int(input("enter c:"))
 def code(a,b,c):
     a != 0
     q = (b*b)
@@ -31,3 +28,4 @@ def imaginary(a,b,c,e,q):
     x1 = (-b-sqrtd)/(2*a)
     x2 = (-b+sqrtd)/(2*a)
     return f"{x1}i,{x2}i"
+

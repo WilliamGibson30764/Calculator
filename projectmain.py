@@ -114,7 +114,7 @@ while True:
             win['-text-'].update("What is X?")
             event, values = win.read()
             x = gb(event)
-            ttext = code(a, b, c, x)
+            ttext = linear(a, b, c, x)
         else:
             gb(event)
 
